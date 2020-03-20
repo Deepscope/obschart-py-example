@@ -3,8 +3,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from obschart import ObschartClient, ProgramTrackActionResponse
-from .body_mass_index import *
+from .body_mass_index import get_info_text
 import os
+import matplotlib.pyplot as plt
 
 token = os.environ["OBSCHART_APP_TOKEN"]
 client = ObschartClient(token)
@@ -15,7 +16,7 @@ print("App server running...")
 async def on_response(response):
     unit = response._data["response"]["steps"][0]["fields"][1]
 
-    if unit == "0":
+    if unit == "1":
         feedback = response.set_feedback(
             "BMI Calculator",
             client.build_feedback_data()
@@ -45,11 +46,18 @@ async def on_response(response):
         bmi = float(response_fields[3]) / (float(response_fields[2]) / 100) ** 2
 
     bmi_rounded = round(bmi, 1)
+    # REPLACE THIS WITH A BETTER CHART
+    fig = plt.plot(bmi_rounded, marker="o")
+    if not os.path.exists("images"):
+        os.mkdir("images")
+    plt.savefig("images/fig1.png")
+    image = client.create_image("images/fig1.png")
+
     bmi_info = get_info_text(bmi)
     feedback2 = response_feedback1.set_feedback(
         "BMI Calculator",
         client.build_feedback_data()
-        .add_text("Your BMI is: " + str(bmi_rounded) + bmi_info)
+        .add_text("Your BMI is: " + str(bmi_rounded) + bmi_info + "\n![](" + image.url + ")")
         .build(),
     )
 
