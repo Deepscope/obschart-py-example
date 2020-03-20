@@ -206,7 +206,7 @@ description = ""
 name = "obschart"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.10.0"
+version = "0.11.0"
 
 [package.dependencies]
 gql = ">=0.3.0,<0.4.0"
@@ -454,7 +454,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "f6d7ca7a907d62968b350934f2fbf60ee08e3e8824b4ba0d3f9ff932bac7c1d5"
+content-hash = "3a57ba77c288db4b08dba4cc034106c0f82c67208ab13c2630e20581cb8c1e46"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -595,8 +595,8 @@ numpy = [
     {file = "numpy-1.18.2.zip", hash = "sha256:e7894793e6e8540dbeac77c87b489e331947813511108ae097f1715c018b8f3d"},
 ]
 obschart = [
-    {file = "obschart-0.10.0-py3-none-any.whl", hash = "sha256:7acc1578fada65a1cdce079e004225c4d67b5ea9c73a5d4d210806af8b2afa11"},
-    {file = "obschart-0.10.0.tar.gz", hash = "sha256:6839c73ad7933dcae89d2a7c6be0afc11ab3f43f75d027b7f75352e9e4910d41"},
+    {file = "obschart-0.11.0-py3-none-any.whl", hash = "sha256:4fdcfffbfa5af0521762ae74ad6a6d6036df2988d93a3628c01489e57fc4f3a0"},
+    {file = "obschart-0.11.0.tar.gz", hash = "sha256:ba664e5822b6c27f9602dbfa2c7973dc5d84c2ccaa8c3a60bd6891b58974f577"},
 ]
 packaging = [
     {file = "packaging-20.3-py2.py3-none-any.whl", hash = "sha256:82f77b9bee21c1bafbf35a84905d604d5d1223801d639cf3ed140bd651c08752"},
