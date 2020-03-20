@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "obschartapp"
+version = "1.0.0"
+description = ""
+authors = ["ObsChart <contact@obschart.co.uk>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+obschart = "^0.9.0"
+python-dotenv = "^0.12.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-watch = "^4.2.0"
+black = "^19.10b0"
+
+[tool.black]
+line-length = 100
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

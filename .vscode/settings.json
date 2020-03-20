@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": true,
+  "python.pythonPath": "${workspaceFolder}/.venv",
+  "python.formatting.provider": "black"
+}
