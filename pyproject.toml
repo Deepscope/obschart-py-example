@@ -6,7 +6,7 @@ authors = ["ObsChart <contact@obschart.co.uk>"]
 
 [tool.poetry.dependencies]
 python = "^3.6"
-obschart = "^0.11.0"
+obschart = "^0.12.0"
 python-dotenv = "^0.12.0"
 matplotlib = "^3.2.1"
 

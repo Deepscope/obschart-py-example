@@ -47,11 +47,9 @@ async def on_response(response: ProgramTrackActionResponse):
 
     bmi_rounded = round(bmi, 1)
     # REPLACE THIS WITH A BETTER CHART
-    fig = plt.plot(bmi_rounded, marker="o")
-    if not os.path.exists("images"):
-        os.mkdir("images")
-    plt.savefig("images/fig1.png")
-    image = await client.create_image("images/fig1.png")
+    plt.plot(bmi_rounded, marker="o")
+    figure = plt.gcf()
+    image = await client.create_image(figure)
 
     bmi_info = get_info_text(bmi)
     feedback2 = await response_feedback1.set_feedback(
