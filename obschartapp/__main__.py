@@ -54,9 +54,9 @@ async def on_response(response: ProgramTrackActionResponse):
     bmi_info = get_info_text(bmi)
     feedback2 = await response_feedback1.set_feedback(
         "BMI Calculator",
-        client.build_feedback_data()
-        .add_text("Your BMI is: " + str(bmi_rounded) + bmi_info + "\n![](" + image.url + ")")
-        .build(),
+        client.build_feedback_data().add_text(
+            "Your BMI is: " + str(bmi_rounded) + bmi_info + "\n![](" + image.url + ")"
+        ),
     )
 
     response2 = await feedback2.wait_for_response()
