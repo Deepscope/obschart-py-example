@@ -7,5 +7,6 @@
   "pyright.disableLanguageServices": true,
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
-  }
+  },
+  "python.linting.mypyEnabled": true
 }
