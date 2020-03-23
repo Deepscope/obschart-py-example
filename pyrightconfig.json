@@ -1,4 +1,19 @@
 {
   "venvPath": ".",
-  "venv": ".venv"
+  "venv": ".venv",
+  "include": ["obschartapp", "tests"],
+  "executionEnvironments": [
+    {
+      "root": "obschartapp"
+    },
+    {
+      "root": "tests",
+      "extraPaths": ["."]
+    }
+  ],
+  "reportUnusedImport": "error",
+  "reportDuplicateImport": "error",
+  "reportUnusedVariable": "error",
+  "reportUnusedClass": "error",
+  "reportUnusedFunction": "error"
 }

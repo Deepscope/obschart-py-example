@@ -3,10 +3,11 @@
   "python.pythonPath": "${workspaceFolder}/.venv",
   "python.formatting.provider": "black",
   "pyright.openFilesOnly": false,
-  "python.jediEnabled": false,
   "pyright.disableLanguageServices": true,
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
-  "python.linting.mypyEnabled": true
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.enabled": true
 }
